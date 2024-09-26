@@ -33,6 +33,7 @@ RUN set -x \
     && chmod +x winetricks \
     && mv winetricks /usr/local/bin
 
+RUN apt install --no-install-recommends -qfy build-essential
 # wine settings
 ENV WINEARCH=win64
 ENV WINEDEBUG=fixme-all
