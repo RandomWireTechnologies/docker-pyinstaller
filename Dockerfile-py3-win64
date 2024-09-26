@@ -72,6 +72,9 @@ ENV W_WINDIR_UNIX="$W_DRIVE_C/windows"
 ENV W_SYSTEM64_DLLS="$W_WINDIR_UNIX/system32"
 ENV W_TMP="$W_DRIVE_C/windows/temp/_$0"
 
+# Add git fix
+RUN git config --global --add safe.directory /src
+
 # install Microsoft Visual C++ Redistributable for Visual Studio 2017 dll files
 RUN set -x \
     && rm -f "$W_TMP"/* \
