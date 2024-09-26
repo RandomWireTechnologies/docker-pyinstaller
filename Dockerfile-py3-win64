@@ -35,6 +35,9 @@ RUN set -x \
     && chmod +x winetricks \
     && mv winetricks /usr/local/bin
 
+RUN apt update -qy \
+    && apt install --no-install-recommends -qfy curl
+
 # wine settings
 ENV WINEARCH=win64
 ENV WINEDEBUG=fixme-all
