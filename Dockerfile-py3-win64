@@ -36,7 +36,7 @@ RUN set -x \
     && mv winetricks /usr/local/bin
 
 RUN apt update -qy \
-    && apt install --no-install-recommends -qfy curl python3-pip python3.12-venv
+    && apt install --no-install-recommends -qfy curl python3-pip python3-venv
 
 # wine settings
 ENV WINEARCH=win64
